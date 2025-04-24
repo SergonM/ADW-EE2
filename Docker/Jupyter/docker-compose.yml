@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  jupyterlab:
+    image: dockeibe/etsiinf-jupydbt:latest
+    container_name: jupyterlab_container
+    restart: no
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../../Notebook:/home/jovyan/dbt/workspace
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    networks:
+      - eda_network
+
+networks:
+  eda_network:
+    name: eda_network 
+
+

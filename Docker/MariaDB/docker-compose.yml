@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb_container
+    restart: no
+    environment:
+      MYSQL_ROOT_PASSWORD: PfmmA143-WhFyiogiOp
+      MYSQL_DATABASE: SakilaDB
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ./sakila-db:/docker-entrypoint-initdb.d  # Carga la BD Sakila al iniciar
+    command: --local-infile=1
+    networks:
+      - eda_network
+
+volumes:
+  mariadb_data:
+
+networks:
+  eda_network:
+    name: eda_network
