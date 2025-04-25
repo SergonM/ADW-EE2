@@ -6,11 +6,9 @@ SELECT
     first_name,
     last_name,
     address_id,
-    picture,
     email,
     store_id,
     active,
     username,
-    password,
     last_update
 FROM source

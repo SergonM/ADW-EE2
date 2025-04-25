@@ -12136,3 +12136,1408 @@ SELECT * FROM final
 [0m13:08:05.451924 [debug] [MainThread]: Command `dbt run` succeeded at 13:08:05.451824 after 2.15 seconds
 [0m13:08:05.452276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a5486769f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a547fe8b0b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a547fe8bd70>]}
 [0m13:08:05.452665 [debug] [MainThread]: Flushing usage events
+[0m13:21:00.006476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827d6f8e120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827d4e99590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827d4e99450>]}
+
+
+============================== 13:21:00.009415 | ee96b03e-424a-42ad-9f92-22b843fb22a7 ==============================
+[0m13:21:00.009415 [info ] [MainThread]: Running with dbt=1.8.9
+[0m13:21:00.009986 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:21:00.154886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827d5ecdcd0>]}
+[0m13:21:00.204298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827d4d0b790>]}
+[0m13:21:00.204890 [info ] [MainThread]: Registered adapter: clickhouse=1.8.9
+[0m13:21:00.283942 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m13:21:00.389675 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 5 files changed.
+[0m13:21:00.390225 [debug] [MainThread]: Partial parsing: updated file: sakstar://models/staging/stg_language.sql
+[0m13:21:00.390617 [debug] [MainThread]: Partial parsing: updated file: sakstar://models/staging/stg_city.sql
+[0m13:21:00.390964 [debug] [MainThread]: Partial parsing: updated file: sakstar://models/staging/stg_country.sql
+[0m13:21:00.391304 [debug] [MainThread]: Partial parsing: updated file: sakstar://models/staging/stg_address.sql
+[0m13:21:00.391656 [debug] [MainThread]: Partial parsing: updated file: sakstar://models/staging/stg_staff.sql
+[0m13:21:00.619231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827d4931b50>]}
+[0m13:21:00.711422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827d4cedf40>]}
+[0m13:21:00.711810 [info ] [MainThread]: Found 14 models, 16 data tests, 10 sources, 608 macros
+[0m13:21:00.712108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827d4682190>]}
+[0m13:21:00.714226 [info ] [MainThread]: 
+[0m13:21:00.714759 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m13:21:00.721284 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list_'
+[0m13:21:00.730660 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:21:00.924371 [debug] [ThreadPool]: dbt_clickhouse adapter: On list_: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "connection_name": "list_"} */
+
+    select name from system.databases
+  ...
+[0m13:21:00.926786 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:00.991728 [debug] [ThreadPool]: dbt_clickhouse adapter: On list_: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "connection_name": "list_"} */
+
+    select name from system.databases
+  ...
+[0m13:21:00.994414 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:00.997184 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_, now list__adw02_star)
+[0m13:21:01.003434 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__adw02_star: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "connection_name": "list__adw02_star"} */
+select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        engine in ('MaterializedView', 'View'), 'view',
+        engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,0 as is_on_cluster
+          from system.tables as t join system.databases as db on t.database = db.name
+        where schema = 'adw02_star'
+      
+
+  ...
+[0m13:21:01.017839 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.019094 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list__adw02_star, now list__adw02_stag)
+[0m13:21:01.020556 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__adw02_stag: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "connection_name": "list__adw02_stag"} */
+select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        engine in ('MaterializedView', 'View'), 'view',
+        engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,0 as is_on_cluster
+          from system.tables as t join system.databases as db on t.database = db.name
+        where schema = 'adw02_stag'
+      
+
+  ...
+[0m13:21:01.031874 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.033282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c90c6a90>]}
+[0m13:21:01.033765 [info ] [MainThread]: Concurrency: 1 threads (target='clickhouse')
+[0m13:21:01.034058 [info ] [MainThread]: 
+[0m13:21:01.035962 [debug] [Thread-1 (]: Began running node model.sakstar.stg_address
+[0m13:21:01.036541 [info ] [Thread-1 (]: 1 of 14 START sql table model `adw02_stag`.`stg_address` ....................... [RUN]
+[0m13:21:01.036989 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list__adw02_stag, now model.sakstar.stg_address)
+[0m13:21:01.037387 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_address
+[0m13:21:01.044551 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_address"
+[0m13:21:01.045099 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_address
+[0m13:21:01.063319 [debug] [Thread-1 (]: Creating new relation stg_address
+[0m13:21:01.093744 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_address: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_address"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_address`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM `sakila_proxy`.`address`
+)
+SELECT
+    address_id,
+    address,
+    district,
+    city_id,
+    postal_code,
+    phone,
+    last_update
+FROM source
+          )
+        
+        ...
+[0m13:21:01.104967 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.120761 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_address: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_address"} */
+
+    select name, type from system.columns where table = 'stg_address'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m13:21:01.124582 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.128351 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_address"
+[0m13:21:01.128911 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_address: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_address"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_address`
+        ("address_id", "address", "district", "city_id", "postal_code", "phone", "last_update")WITH source AS (
+    SELECT * FROM `sakila_proxy`.`address`
+)
+SELECT
+    address_id,
+    address,
+    district,
+    city_id,
+    postal_code,
+    phone,
+    last_update
+FROM source
+  ...
+[0m13:21:01.143937 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.162482 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8c7c290>]}
+[0m13:21:01.163060 [info ] [Thread-1 (]: 1 of 14 OK created sql table model `adw02_stag`.`stg_address` .................. [[32mOK[0m in 0.12s]
+[0m13:21:01.163627 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_address
+[0m13:21:01.164035 [debug] [Thread-1 (]: Began running node model.sakstar.stg_city
+[0m13:21:01.164624 [info ] [Thread-1 (]: 2 of 14 START sql table model `adw02_stag`.`stg_city` .......................... [RUN]
+[0m13:21:01.165051 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.stg_address, now model.sakstar.stg_city)
+[0m13:21:01.165463 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_city
+[0m13:21:01.168147 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_city"
+[0m13:21:01.168834 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_city
+[0m13:21:01.171324 [debug] [Thread-1 (]: Creating new relation stg_city
+[0m13:21:01.173135 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_city: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_city"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_city`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM `sakila_proxy`.`city`
+)
+SELECT
+    city_id,
+    city,
+    country_id
+FROM source
+          )
+        
+        ...
+[0m13:21:01.184272 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.186707 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_city: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_city"} */
+
+    select name, type from system.columns where table = 'stg_city'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m13:21:01.189853 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.191570 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_city"
+[0m13:21:01.192112 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_city: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_city"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_city`
+        ("city_id", "city", "country_id")WITH source AS (
+    SELECT * FROM `sakila_proxy`.`city`
+)
+SELECT
+    city_id,
+    city,
+    country_id
+FROM source
+  ...
+[0m13:21:01.205509 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.207159 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c90fa570>]}
+[0m13:21:01.207703 [info ] [Thread-1 (]: 2 of 14 OK created sql table model `adw02_stag`.`stg_city` ..................... [[32mOK[0m in 0.04s]
+[0m13:21:01.208255 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_city
+[0m13:21:01.208784 [debug] [Thread-1 (]: Began running node model.sakstar.stg_country
+[0m13:21:01.209228 [info ] [Thread-1 (]: 3 of 14 START sql table model `adw02_stag`.`stg_country` ....................... [RUN]
+[0m13:21:01.209740 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.stg_city, now model.sakstar.stg_country)
+[0m13:21:01.210098 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_country
+[0m13:21:01.213118 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_country"
+[0m13:21:01.213739 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_country
+[0m13:21:01.215529 [debug] [Thread-1 (]: Creating new relation stg_country
+[0m13:21:01.216488 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_country: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_country"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_country`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM `sakila_proxy`.`country`
+)
+SELECT
+    country_id,
+    country
+FROM source
+          )
+        
+        ...
+[0m13:21:01.228710 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.231516 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_country: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_country"} */
+
+    select name, type from system.columns where table = 'stg_country'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m13:21:01.235136 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.236695 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_country"
+[0m13:21:01.237299 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_country: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_country"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_country`
+        ("country_id", "country")WITH source AS (
+    SELECT * FROM `sakila_proxy`.`country`
+)
+SELECT
+    country_id,
+    country
+FROM source
+  ...
+[0m13:21:01.250499 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.252327 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827d4b75810>]}
+[0m13:21:01.252949 [info ] [Thread-1 (]: 3 of 14 OK created sql table model `adw02_stag`.`stg_country` .................. [[32mOK[0m in 0.04s]
+[0m13:21:01.253668 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_country
+[0m13:21:01.254182 [debug] [Thread-1 (]: Began running node model.sakstar.stg_customer
+[0m13:21:01.254910 [info ] [Thread-1 (]: 4 of 14 START sql table model `adw02_stag`.`stg_customer` ...................... [RUN]
+[0m13:21:01.255477 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.stg_country, now model.sakstar.stg_customer)
+[0m13:21:01.256126 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_customer
+[0m13:21:01.259130 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_customer"
+[0m13:21:01.259720 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_customer
+[0m13:21:01.261886 [debug] [Thread-1 (]: Creating new relation stg_customer
+[0m13:21:01.263293 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_customer"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_customer`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM `sakila_proxy`.`customer`
+)
+SELECT
+    customer_id,
+    store_id,
+    first_name,
+    last_name,
+    email,
+    address_id,
+    active,
+    create_date,
+    last_update
+FROM source
+          )
+        
+        ...
+[0m13:21:01.274827 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.277294 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_customer"} */
+
+    select name, type from system.columns where table = 'stg_customer'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m13:21:01.280788 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.282836 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_customer"
+[0m13:21:01.283432 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_customer"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_customer`
+        ("customer_id", "store_id", "first_name", "last_name", "email", "address_id", "active", "create_date", "last_update")WITH source AS (
+    SELECT * FROM `sakila_proxy`.`customer`
+)
+SELECT
+    customer_id,
+    store_id,
+    first_name,
+    last_name,
+    email,
+    address_id,
+    active,
+    create_date,
+    last_update
+FROM source
+  ...
+[0m13:21:01.299553 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m13:21:01.301412 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8d469d0>]}
+[0m13:21:01.301992 [info ] [Thread-1 (]: 4 of 14 OK created sql table model `adw02_stag`.`stg_customer` ................. [[32mOK[0m in 0.05s]
+[0m13:21:01.302672 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_customer
+[0m13:21:01.303092 [debug] [Thread-1 (]: Began running node model.sakstar.stg_film
+[0m13:21:01.303717 [info ] [Thread-1 (]: 5 of 14 START sql table model `adw02_stag`.`stg_film` .......................... [RUN]
+[0m13:21:01.304287 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.stg_customer, now model.sakstar.stg_film)
+[0m13:21:01.304650 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_film
+[0m13:21:01.307280 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_film"
+[0m13:21:01.307992 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_film
+[0m13:21:01.310369 [debug] [Thread-1 (]: Creating new relation stg_film
+[0m13:21:01.311353 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_film: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_film"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_film`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM `sakila_proxy`.`film`
+)
+SELECT
+    film_id,
+    title,
+    description,
+    release_year,
+    language_id,
+    original_language_id,
+    rental_duration,
+    rental_rate,
+    length,
+    replacement_cost,
+    rating,
+    special_features,
+    last_update
+FROM source
+          )
+        
+        ...
+[0m13:21:01.324160 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.326727 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_film: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_film"} */
+
+    select name, type from system.columns where table = 'stg_film'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m13:21:01.330022 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.332238 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_film"
+[0m13:21:01.332763 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_film: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_film"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_film`
+        ("film_id", "title", "description", "release_year", "language_id", "original_language_id", "rental_duration", "rental_rate", "length", "replacement_cost", "rating", "special_features", "last_update")WITH source AS (
+    SELECT * FROM `sakila_proxy`.`film`
+)
+SELECT
+    film_id,
+    title,
+    description,
+    release_year,
+    language_id,
+    original_language_id,
+    rental_duration,
+    rental_rate,
+    length,
+    replacement_cost,
+    rating,
+    special_features,
+    last_update
+FROM source
+  ...
+[0m13:21:01.348842 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m13:21:01.350424 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8dcd7f0>]}
+[0m13:21:01.350927 [info ] [Thread-1 (]: 5 of 14 OK created sql table model `adw02_stag`.`stg_film` ..................... [[32mOK[0m in 0.05s]
+[0m13:21:01.351445 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_film
+[0m13:21:01.351807 [debug] [Thread-1 (]: Began running node model.sakstar.stg_inventory
+[0m13:21:01.352315 [info ] [Thread-1 (]: 6 of 14 START sql table model `adw02_stag`.`stg_inventory` ..................... [RUN]
+[0m13:21:01.352720 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.stg_film, now model.sakstar.stg_inventory)
+[0m13:21:01.353042 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_inventory
+[0m13:21:01.355375 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_inventory"
+[0m13:21:01.355926 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_inventory
+[0m13:21:01.357853 [debug] [Thread-1 (]: Creating new relation stg_inventory
+[0m13:21:01.361552 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_inventory: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_inventory"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_inventory`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM `sakila_proxy`.`inventory`
+)
+SELECT
+    inventory_id,
+    film_id,
+    store_id,
+    last_update
+FROM source
+          )
+        
+        ...
+[0m13:21:01.373025 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.375529 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_inventory: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_inventory"} */
+
+    select name, type from system.columns where table = 'stg_inventory'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m13:21:01.378973 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.380740 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_inventory"
+[0m13:21:01.381398 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_inventory: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_inventory"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_inventory`
+        ("inventory_id", "film_id", "store_id", "last_update")WITH source AS (
+    SELECT * FROM `sakila_proxy`.`inventory`
+)
+SELECT
+    inventory_id,
+    film_id,
+    store_id,
+    last_update
+FROM source
+  ...
+[0m13:21:01.396448 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.398040 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8d83710>]}
+[0m13:21:01.398544 [info ] [Thread-1 (]: 6 of 14 OK created sql table model `adw02_stag`.`stg_inventory` ................ [[32mOK[0m in 0.05s]
+[0m13:21:01.399040 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_inventory
+[0m13:21:01.399418 [debug] [Thread-1 (]: Began running node model.sakstar.stg_language
+[0m13:21:01.399898 [info ] [Thread-1 (]: 7 of 14 START sql table model `adw02_stag`.`stg_language` ...................... [RUN]
+[0m13:21:01.400266 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.stg_inventory, now model.sakstar.stg_language)
+[0m13:21:01.400586 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_language
+[0m13:21:01.402843 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_language"
+[0m13:21:01.403386 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_language
+[0m13:21:01.405721 [debug] [Thread-1 (]: Creating new relation stg_language
+[0m13:21:01.406682 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_language: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_language"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_language`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM `sakila_proxy`.`language`
+)
+SELECT
+    language_id,
+    name
+FROM source
+          )
+        
+        ...
+[0m13:21:01.418136 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.420731 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_language: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_language"} */
+
+    select name, type from system.columns where table = 'stg_language'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m13:21:01.423959 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.425882 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_language"
+[0m13:21:01.426457 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_language: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_language"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_language`
+        ("language_id", "name")WITH source AS (
+    SELECT * FROM `sakila_proxy`.`language`
+)
+SELECT
+    language_id,
+    name
+FROM source
+  ...
+[0m13:21:01.439463 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.441027 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8d82f30>]}
+[0m13:21:01.441637 [info ] [Thread-1 (]: 7 of 14 OK created sql table model `adw02_stag`.`stg_language` ................. [[32mOK[0m in 0.04s]
+[0m13:21:01.442139 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_language
+[0m13:21:01.442502 [debug] [Thread-1 (]: Began running node model.sakstar.stg_rental
+[0m13:21:01.442895 [info ] [Thread-1 (]: 8 of 14 START sql table model `adw02_stag`.`stg_rental` ........................ [RUN]
+[0m13:21:01.443271 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.stg_language, now model.sakstar.stg_rental)
+[0m13:21:01.443706 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_rental
+[0m13:21:01.446003 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_rental"
+[0m13:21:01.446643 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_rental
+[0m13:21:01.448526 [debug] [Thread-1 (]: Creating new relation stg_rental
+[0m13:21:01.449983 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_rental: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_rental"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_rental`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM `sakila_proxy`.`rental`
+)
+SELECT
+    rental_id,
+    rental_date,
+    inventory_id,
+    customer_id,
+    return_date,
+    staff_id,
+    last_update
+FROM source
+          )
+        
+        ...
+[0m13:21:01.461916 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.464229 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_rental: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_rental"} */
+
+    select name, type from system.columns where table = 'stg_rental'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m13:21:01.467462 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.469228 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_rental"
+[0m13:21:01.469762 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_rental: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_rental"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_rental`
+        ("rental_id", "rental_date", "inventory_id", "customer_id", "return_date", "staff_id", "last_update")WITH source AS (
+    SELECT * FROM `sakila_proxy`.`rental`
+)
+SELECT
+    rental_id,
+    rental_date,
+    inventory_id,
+    customer_id,
+    return_date,
+    staff_id,
+    last_update
+FROM source
+  ...
+[0m13:21:01.493477 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m13:21:01.495332 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827d4d205f0>]}
+[0m13:21:01.495849 [info ] [Thread-1 (]: 8 of 14 OK created sql table model `adw02_stag`.`stg_rental` ................... [[32mOK[0m in 0.05s]
+[0m13:21:01.496437 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_rental
+[0m13:21:01.496809 [debug] [Thread-1 (]: Began running node model.sakstar.stg_staff
+[0m13:21:01.497217 [info ] [Thread-1 (]: 9 of 14 START sql table model `adw02_stag`.`stg_staff` ......................... [RUN]
+[0m13:21:01.497605 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.stg_rental, now model.sakstar.stg_staff)
+[0m13:21:01.497922 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_staff
+[0m13:21:01.500320 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_staff"
+[0m13:21:01.500961 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_staff
+[0m13:21:01.503270 [debug] [Thread-1 (]: Creating new relation stg_staff
+[0m13:21:01.504295 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_staff: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_staff"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_staff`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM `sakila_proxy`.`staff`
+)
+SELECT
+    staff_id,
+    first_name,
+    last_name,
+    address_id,
+    email,
+    store_id,
+    active,
+    username,
+    last_update
+FROM source
+          )
+        
+        ...
+[0m13:21:01.516702 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.519185 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_staff: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_staff"} */
+
+    select name, type from system.columns where table = 'stg_staff'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m13:21:01.522573 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.524799 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_staff"
+[0m13:21:01.525306 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_staff: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_staff"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_staff`
+        ("staff_id", "first_name", "last_name", "address_id", "email", "store_id", "active", "username", "last_update")WITH source AS (
+    SELECT * FROM `sakila_proxy`.`staff`
+)
+SELECT
+    staff_id,
+    first_name,
+    last_name,
+    address_id,
+    email,
+    store_id,
+    active,
+    username,
+    last_update
+FROM source
+  ...
+[0m13:21:01.539621 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.541199 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8d82870>]}
+[0m13:21:01.541805 [info ] [Thread-1 (]: 9 of 14 OK created sql table model `adw02_stag`.`stg_staff` .................... [[32mOK[0m in 0.04s]
+[0m13:21:01.542318 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_staff
+[0m13:21:01.542697 [debug] [Thread-1 (]: Began running node model.sakstar.stg_store
+[0m13:21:01.543214 [info ] [Thread-1 (]: 10 of 14 START sql table model `adw02_stag`.`stg_store` ........................ [RUN]
+[0m13:21:01.543636 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.stg_staff, now model.sakstar.stg_store)
+[0m13:21:01.543949 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_store
+[0m13:21:01.546300 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_store"
+[0m13:21:01.546857 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_store
+[0m13:21:01.548733 [debug] [Thread-1 (]: Creating new relation stg_store
+[0m13:21:01.550155 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_store: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_store"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_store`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM `sakila_proxy`.`store`
+)
+SELECT
+    store_id,
+    manager_staff_id,
+    address_id,
+    last_update
+FROM source
+          )
+        
+        ...
+[0m13:21:01.563128 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.565570 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_store: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_store"} */
+
+    select name, type from system.columns where table = 'stg_store'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m13:21:01.568900 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.570643 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_store"
+[0m13:21:01.571199 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_store: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_store"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_store`
+        ("store_id", "manager_staff_id", "address_id", "last_update")WITH source AS (
+    SELECT * FROM `sakila_proxy`.`store`
+)
+SELECT
+    store_id,
+    manager_staff_id,
+    address_id,
+    last_update
+FROM source
+  ...
+[0m13:21:01.584357 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.585923 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8d25010>]}
+[0m13:21:01.586431 [info ] [Thread-1 (]: 10 of 14 OK created sql table model `adw02_stag`.`stg_store` ................... [[32mOK[0m in 0.04s]
+[0m13:21:01.586950 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_store
+[0m13:21:01.587370 [debug] [Thread-1 (]: Began running node model.sakstar.dim_customer
+[0m13:21:01.587781 [info ] [Thread-1 (]: 11 of 14 START sql table model `adw02_star`.`dim_customer` ..................... [RUN]
+[0m13:21:01.588172 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.stg_store, now model.sakstar.dim_customer)
+[0m13:21:01.588717 [debug] [Thread-1 (]: Began compiling node model.sakstar.dim_customer
+[0m13:21:01.602459 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.dim_customer"
+[0m13:21:01.603066 [debug] [Thread-1 (]: Began executing node model.sakstar.dim_customer
+[0m13:21:01.605117 [debug] [Thread-1 (]: Creating new relation dim_customer
+[0m13:21:01.606124 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_customer"} */
+
+            
+
+    
+        create table `adw02_star`.`dim_customer`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH customers AS (
+    SELECT * FROM `adw02_stag`.`stg_customer`
+),
+addresses AS (
+    SELECT * FROM `adw02_stag`.`stg_address`
+),
+cities AS (
+    SELECT * FROM `adw02_stag`.`stg_city`
+),
+countries AS (
+    SELECT * FROM `adw02_stag`.`stg_country`
+),
+final AS (
+    SELECT
+        lower(hex(MD5(toString(coalesce(cast(customer_id as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(customer_first_name as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(customer_last_name as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(customer_email as String), '_dbt_utils_surrogate_key_null_') )))) AS customer_skey,
+        c.customer_id AS customer_id,
+        c.first_name AS customer_first_name,
+        c.last_name AS customer_last_name,
+        c.email AS customer_email,
+        c.active AS customer_active,
+        c.create_date AS customer_created,
+        a.address AS customer_address,
+        a.district AS customer_district,
+        a.postal_code AS customer_postal_code,
+        a.phone AS customer_phone_number,
+        ci.city AS customer_city,
+        co.country AS customer_country,
+        c.last_update AS customer_last_update
+    FROM customers c
+    LEFT JOIN addresses a ON c.address_id = a.address_id
+    LEFT JOIN cities ci ON a.city_id = ci.city_id
+    LEFT JOIN countries co ON ci.country_id = co.country_id
+)
+SELECT * FROM final
+ORDER BY customer_id
+          )
+        
+        ...
+[0m13:21:01.618411 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.620998 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_customer"} */
+
+    select name, type from system.columns where table = 'dim_customer'
+    
+      and database = 'adw02_star'
+    
+    order by position
+  ...
+[0m13:21:01.624544 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.627011 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.dim_customer"
+[0m13:21:01.627574 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_customer"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_star`.`dim_customer`
+        ("customer_skey", "customer_id", "customer_first_name", "customer_last_name", "customer_email", "customer_active", "customer_created", "customer_address", "customer_district", "customer_postal_code", "customer_phone_number", "customer_city", "customer_country", "customer_last_update")WITH customers AS (
+    SELECT * FROM `adw02_stag`.`stg_customer`
+),
+addresses AS (
+    SELECT * FROM `adw02_stag`.`stg_address`
+),
+cities AS (
+    SELECT * FROM `adw02_stag`.`stg_city`
+),
+countries AS (
+    SELECT * FROM `adw02_stag`.`stg_country`
+),
+final AS (
+    SELECT
+        lower(hex(MD5(toString(coalesce(cast(customer_id as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(customer_first_name as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(customer_last_name as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(customer_email as String), '_dbt_utils_surrogate_key_null_') )))) AS customer_skey,
+        c.customer_id AS customer_id,
+        c.first_name AS customer_first_name,
+        c.last_name AS customer_last_name,
+        c.email AS customer_email,
+        c.active AS customer_active,
+        c.create_date AS customer_created,
+        a.address AS customer_address,
+        a.district AS customer_district,
+        a.postal_code AS customer_postal_code,
+        a.phone AS customer_phone_number,
+        ci.city AS customer_city,
+        co.country AS customer_country,
+        c.last_update AS customer_last_update
+    FROM customers c
+    LEFT JOIN addresses a ON c.address_id = a.address_id
+    LEFT JOIN cities ci ON a.city_id = ci.city_id
+    LEFT JOIN countries co ON ci.country_id = co.country_id
+)
+SELECT * FROM final
+ORDER BY customer_id
+  ...
+[0m13:21:01.645064 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m13:21:01.646701 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8d24590>]}
+[0m13:21:01.647199 [info ] [Thread-1 (]: 11 of 14 OK created sql table model `adw02_star`.`dim_customer` ................ [[32mOK[0m in 0.06s]
+[0m13:21:01.647738 [debug] [Thread-1 (]: Finished running node model.sakstar.dim_customer
+[0m13:21:01.648138 [debug] [Thread-1 (]: Began running node model.sakstar.dim_film
+[0m13:21:01.648751 [info ] [Thread-1 (]: 12 of 14 START sql table model `adw02_star`.`dim_film` ......................... [RUN]
+[0m13:21:01.649382 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.dim_customer, now model.sakstar.dim_film)
+[0m13:21:01.649708 [debug] [Thread-1 (]: Began compiling node model.sakstar.dim_film
+[0m13:21:01.653699 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.dim_film"
+[0m13:21:01.654336 [debug] [Thread-1 (]: Began executing node model.sakstar.dim_film
+[0m13:21:01.656674 [debug] [Thread-1 (]: Creating new relation dim_film
+[0m13:21:01.657683 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_film: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_film"} */
+
+            
+
+    
+        create table `adw02_star`.`dim_film`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH films AS (
+    SELECT * FROM `adw02_stag`.`stg_film`
+),
+languages AS (
+    SELECT * FROM `adw02_stag`.`stg_language`
+),
+original_languages AS (
+    SELECT * FROM `adw02_stag`.`stg_language`
+),
+final AS (
+    SELECT
+        lower(hex(MD5(toString(coalesce(cast(film_id as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(film_title as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(film_description as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(film_release_year as String), '_dbt_utils_surrogate_key_null_') )))) AS film_skey,
+        f.film_id AS film_id,
+        f.title AS film_title,
+        f.description AS film_description,
+        f.release_year AS film_release_year,
+        l.name AS film_language,
+        ol.name AS film_original_language,
+        f.original_language_id IS NOT NULL AS film_has_original_language,
+        f.rental_duration AS film_rental_duration,
+        f.rental_rate AS film_rental_rate,
+        f.length AS film_duration,
+        f.replacement_cost AS film_replacement_cost,
+        f.rating AS film_rating,
+        f.special_features AS film_special_features,
+        f.last_update AS film_last_update
+    FROM films f
+    LEFT JOIN languages l ON f.language_id = l.language_id
+    LEFT JOIN original_languages ol ON f.original_language_id = ol.language_id
+)
+SELECT * FROM final
+          )
+        
+        ...
+[0m13:21:01.669704 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.672029 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_film: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_film"} */
+
+    select name, type from system.columns where table = 'dim_film'
+    
+      and database = 'adw02_star'
+    
+    order by position
+  ...
+[0m13:21:01.675285 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.677809 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.dim_film"
+[0m13:21:01.678376 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_film: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_film"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_star`.`dim_film`
+        ("film_skey", "film_id", "film_title", "film_description", "film_release_year", "film_language", "film_original_language", "film_has_original_language", "film_rental_duration", "film_rental_rate", "film_duration", "film_replacement_cost", "film_rating", "film_special_features", "film_last_update")WITH films AS (
+    SELECT * FROM `adw02_stag`.`stg_film`
+),
+languages AS (
+    SELECT * FROM `adw02_stag`.`stg_language`
+),
+original_languages AS (
+    SELECT * FROM `adw02_stag`.`stg_language`
+),
+final AS (
+    SELECT
+        lower(hex(MD5(toString(coalesce(cast(film_id as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(film_title as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(film_description as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(film_release_year as String), '_dbt_utils_surrogate_key_null_') )))) AS film_skey,
+        f.film_id AS film_id,
+        f.title AS film_title,
+        f.description AS film_description,
+        f.release_year AS film_release_year,
+        l.name AS film_language,
+        ol.name AS film_original_language,
+        f.original_language_id IS NOT NULL AS film_has_original_language,
+        f.rental_duration AS film_rental_duration,
+        f.rental_rate AS film_rental_rate,
+        f.length AS film_duration,
+        f.replacement_cost AS film_replacement_cost,
+        f.rating AS film_rating,
+        f.special_features AS film_special_features,
+        f.last_update AS film_last_update
+    FROM films f
+    LEFT JOIN languages l ON f.language_id = l.language_id
+    LEFT JOIN original_languages ol ON f.original_language_id = ol.language_id
+)
+SELECT * FROM final
+  ...
+[0m13:21:01.695161 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m13:21:01.696813 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8d26750>]}
+[0m13:21:01.697402 [info ] [Thread-1 (]: 12 of 14 OK created sql table model `adw02_star`.`dim_film` .................... [[32mOK[0m in 0.05s]
+[0m13:21:01.697909 [debug] [Thread-1 (]: Finished running node model.sakstar.dim_film
+[0m13:21:01.698324 [debug] [Thread-1 (]: Began running node model.sakstar.dim_staff
+[0m13:21:01.698746 [info ] [Thread-1 (]: 13 of 14 START sql table model `adw02_star`.`dim_staff` ........................ [RUN]
+[0m13:21:01.699130 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.dim_film, now model.sakstar.dim_staff)
+[0m13:21:01.699453 [debug] [Thread-1 (]: Began compiling node model.sakstar.dim_staff
+[0m13:21:01.703423 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.dim_staff"
+[0m13:21:01.704086 [debug] [Thread-1 (]: Began executing node model.sakstar.dim_staff
+[0m13:21:01.706279 [debug] [Thread-1 (]: Creating new relation dim_staff
+[0m13:21:01.707262 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_staff: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_staff"} */
+
+            
+
+    
+        create table `adw02_star`.`dim_staff`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH staff AS (
+    SELECT * FROM `adw02_stag`.`stg_staff`
+),
+addresses AS (
+    SELECT * FROM `adw02_stag`.`stg_address`
+),
+cities AS (
+    SELECT * FROM `adw02_stag`.`stg_city`
+),
+countries AS (
+    SELECT * FROM `adw02_stag`.`stg_country`
+),
+final AS (
+    SELECT
+        lower(hex(MD5(toString(coalesce(cast(staff_id as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(staff_first_name as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(staff_last_name as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(staff_email as String), '_dbt_utils_surrogate_key_null_') )))) AS staff_skey,
+        s.staff_id AS staff_id,
+        s.first_name AS staff_first_name,
+        s.last_name AS staff_last_name,
+        s.email AS staff_email,
+        s.active AS staff_active,
+        s.username AS staff_username,
+        a.address AS staff_address,
+        a.district AS staff_district,
+        a.postal_code AS staff_postal_code,
+        a.phone AS staff_phone_number,
+        ci.city AS staff_city,
+        co.country AS staff_country,
+        s.store_id AS store_id,
+        s.last_update AS staff_last_update
+    FROM staff s
+    LEFT JOIN addresses a ON s.address_id = a.address_id
+    LEFT JOIN cities ci ON a.city_id = ci.city_id
+    LEFT JOIN countries co ON ci.country_id = co.country_id
+)
+SELECT * FROM final
+          )
+        
+        ...
+[0m13:21:01.719675 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.721991 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_staff: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_staff"} */
+
+    select name, type from system.columns where table = 'dim_staff'
+    
+      and database = 'adw02_star'
+    
+    order by position
+  ...
+[0m13:21:01.725134 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.727404 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.dim_staff"
+[0m13:21:01.727955 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_staff: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_staff"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_star`.`dim_staff`
+        ("staff_skey", "staff_id", "staff_first_name", "staff_last_name", "staff_email", "staff_active", "staff_username", "staff_address", "staff_district", "staff_postal_code", "staff_phone_number", "staff_city", "staff_country", "store_id", "staff_last_update")WITH staff AS (
+    SELECT * FROM `adw02_stag`.`stg_staff`
+),
+addresses AS (
+    SELECT * FROM `adw02_stag`.`stg_address`
+),
+cities AS (
+    SELECT * FROM `adw02_stag`.`stg_city`
+),
+countries AS (
+    SELECT * FROM `adw02_stag`.`stg_country`
+),
+final AS (
+    SELECT
+        lower(hex(MD5(toString(coalesce(cast(staff_id as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(staff_first_name as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(staff_last_name as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(staff_email as String), '_dbt_utils_surrogate_key_null_') )))) AS staff_skey,
+        s.staff_id AS staff_id,
+        s.first_name AS staff_first_name,
+        s.last_name AS staff_last_name,
+        s.email AS staff_email,
+        s.active AS staff_active,
+        s.username AS staff_username,
+        a.address AS staff_address,
+        a.district AS staff_district,
+        a.postal_code AS staff_postal_code,
+        a.phone AS staff_phone_number,
+        ci.city AS staff_city,
+        co.country AS staff_country,
+        s.store_id AS store_id,
+        s.last_update AS staff_last_update
+    FROM staff s
+    LEFT JOIN addresses a ON s.address_id = a.address_id
+    LEFT JOIN cities ci ON a.city_id = ci.city_id
+    LEFT JOIN countries co ON ci.country_id = co.country_id
+)
+SELECT * FROM final
+  ...
+[0m13:21:01.744625 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m13:21:01.746419 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8d27050>]}
+[0m13:21:01.747043 [info ] [Thread-1 (]: 13 of 14 OK created sql table model `adw02_star`.`dim_staff` ................... [[32mOK[0m in 0.05s]
+[0m13:21:01.747691 [debug] [Thread-1 (]: Finished running node model.sakstar.dim_staff
+[0m13:21:01.748114 [debug] [Thread-1 (]: Began running node model.sakstar.dim_store
+[0m13:21:01.748637 [info ] [Thread-1 (]: 14 of 14 START sql table model `adw02_star`.`dim_store` ........................ [RUN]
+[0m13:21:01.749038 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sakstar.dim_staff, now model.sakstar.dim_store)
+[0m13:21:01.749514 [debug] [Thread-1 (]: Began compiling node model.sakstar.dim_store
+[0m13:21:01.757267 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.dim_store"
+[0m13:21:01.757933 [debug] [Thread-1 (]: Began executing node model.sakstar.dim_store
+[0m13:21:01.759931 [debug] [Thread-1 (]: Creating new relation dim_store
+[0m13:21:01.760975 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_store: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_store"} */
+
+            
+
+    
+        create table `adw02_star`.`dim_store`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH stores AS (
+    SELECT * FROM `adw02_stag`.`stg_store`
+),
+addresses AS (
+    SELECT * FROM `adw02_stag`.`stg_address`
+),
+cities AS (
+    SELECT * FROM `adw02_stag`.`stg_city`
+),
+countries AS (
+    SELECT * FROM `adw02_stag`.`stg_country`
+),
+staff AS (
+    SELECT * FROM `adw02_stag`.`stg_staff`
+),
+final AS (
+    SELECT
+        lower(hex(MD5(toString(coalesce(cast(store_id as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(store_address as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(store_district as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(store_postal_code as String), '_dbt_utils_surrogate_key_null_') )))) AS store_skey,
+        s.store_id AS store_id,
+        a.address AS store_address,
+        a.district AS store_district,
+        a.postal_code AS store_postal_code,
+        a.phone AS store_phone_number,
+        ci.city AS store_city,
+        co.country AS store_country,
+        s.manager_staff_id AS store_manager_staff_id,
+        stf.first_name AS store_manager_first_name,
+        stf.last_name AS store_manager_last_name,
+        s.last_update AS store_last_update
+    FROM stores s
+    LEFT JOIN addresses a ON s.address_id = a.address_id
+    LEFT JOIN cities ci ON a.city_id = ci.city_id
+    LEFT JOIN countries co ON ci.country_id = co.country_id
+    LEFT JOIN staff stf ON s.manager_staff_id = stf.staff_id
+)
+SELECT * FROM final
+          )
+        
+        ...
+[0m13:21:01.773954 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m13:21:01.776933 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_store: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_store"} */
+
+    select name, type from system.columns where table = 'dim_store'
+    
+      and database = 'adw02_star'
+    
+    order by position
+  ...
+[0m13:21:01.780554 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m13:21:01.782743 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.dim_store"
+[0m13:21:01.783298 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.dim_store: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.dim_store"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_star`.`dim_store`
+        ("store_skey", "store_id", "store_address", "store_district", "store_postal_code", "store_phone_number", "store_city", "store_country", "store_manager_staff_id", "store_manager_first_name", "store_manager_last_name", "store_last_update")WITH stores AS (
+    SELECT * FROM `adw02_stag`.`stg_store`
+),
+addresses AS (
+    SELECT * FROM `adw02_stag`.`stg_address`
+),
+cities AS (
+    SELECT * FROM `adw02_stag`.`stg_city`
+),
+countries AS (
+    SELECT * FROM `adw02_stag`.`stg_country`
+),
+staff AS (
+    SELECT * FROM `adw02_stag`.`stg_staff`
+),
+final AS (
+    SELECT
+        lower(hex(MD5(toString(coalesce(cast(store_id as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(store_address as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(store_district as String), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(store_postal_code as String), '_dbt_utils_surrogate_key_null_') )))) AS store_skey,
+        s.store_id AS store_id,
+        a.address AS store_address,
+        a.district AS store_district,
+        a.postal_code AS store_postal_code,
+        a.phone AS store_phone_number,
+        ci.city AS store_city,
+        co.country AS store_country,
+        s.manager_staff_id AS store_manager_staff_id,
+        stf.first_name AS store_manager_first_name,
+        stf.last_name AS store_manager_last_name,
+        s.last_update AS store_last_update
+    FROM stores s
+    LEFT JOIN addresses a ON s.address_id = a.address_id
+    LEFT JOIN cities ci ON a.city_id = ci.city_id
+    LEFT JOIN countries co ON ci.country_id = co.country_id
+    LEFT JOIN staff stf ON s.manager_staff_id = stf.staff_id
+)
+SELECT * FROM final
+  ...
+[0m13:21:01.801201 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m13:21:01.802792 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee96b03e-424a-42ad-9f92-22b843fb22a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8d83830>]}
+[0m13:21:01.803292 [info ] [Thread-1 (]: 14 of 14 OK created sql table model `adw02_star`.`dim_store` ................... [[32mOK[0m in 0.05s]
+[0m13:21:01.803933 [debug] [Thread-1 (]: Finished running node model.sakstar.dim_store
+[0m13:21:01.805126 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:21:01.805418 [debug] [MainThread]: Connection 'model.sakstar.dim_store' was left open.
+[0m13:21:01.805696 [debug] [MainThread]: On model.sakstar.dim_store: Close
+[0m13:21:01.806091 [info ] [MainThread]: 
+[0m13:21:01.806483 [info ] [MainThread]: Finished running 14 table models in 0 hours 0 minutes and 1.09 seconds (1.09s).
+[0m13:21:01.808990 [debug] [MainThread]: Command end result
+[0m13:21:01.841480 [info ] [MainThread]: 
+[0m13:21:01.841857 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:21:01.842148 [info ] [MainThread]: 
+[0m13:21:01.842472 [info ] [MainThread]: Done. PASS=14 WARN=0 ERROR=0 SKIP=0 TOTAL=14
+[0m13:21:01.843175 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.8818867, "process_in_blocks": "0", "process_kernel_time": 0.170641, "process_mem_max_rss": "141972", "process_out_blocks": "4904", "process_user_time": 2.358703}
+[0m13:21:01.843559 [debug] [MainThread]: Command `dbt run` succeeded at 13:21:01.843466 after 1.88 seconds
+[0m13:21:01.843875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827d580d490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8d248f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7827c8d24950>]}
+[0m13:21:01.844191 [debug] [MainThread]: Flushing usage events

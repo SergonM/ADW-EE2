@@ -3,7 +3,6 @@ WITH source AS (
 )
 SELECT
     country_id,
-    country,
-    last_update
+    country
 FROM source
 

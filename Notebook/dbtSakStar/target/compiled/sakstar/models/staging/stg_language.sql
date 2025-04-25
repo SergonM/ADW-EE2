@@ -3,6 +3,5 @@ WITH source AS (
 )
 SELECT
     language_id,
-    name,
-    last_update
+    name
 FROM source

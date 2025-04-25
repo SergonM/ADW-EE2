@@ -4,6 +4,5 @@ WITH source AS (
 SELECT
     city_id,
     city,
-    country_id,
-    last_update
+    country_id
 FROM source
