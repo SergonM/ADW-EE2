@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: dim_film
+    description: "Film dimension table"
+    columns:
+      - name: film_skey
+        description: "Surrogate key for the film dimension"
+        tests:
+          - unique
+          - not_null
+      - name: film_id
+        description: "The primary key for the film dimension"
+        tests:
+          - unique
+          - not_null
+      - name: film_title
+        description: "Film title"
+      - name: film_description
+        description: "Film description"
+      - name: film_release_year
+        description: "Year when the film was released"
+      - name: film_language
+        description: "Film's language"
+      - name: film_original_language
+        description: "Film's original language if different"
+      - name: film_has_original_language
+        description: "Flag indicating if film has a different original language"
+      - name: film_rental_duration
+        description: "Standard rental duration in days"
+      - name: film_rental_rate
+        description: "Standard rental rate"
+      - name: film_duration
+        description: "Film length in minutes"
+      - name: film_replacement_cost
+        description: "Cost to replace if film is lost/damaged"
+      - name: film_rating
+        description: "Film's rating"
+      - name: film_special_features
+        description: "Special features included with the film"
+      - name: film_last_update
+        description: "Timestamp of last update to film record"

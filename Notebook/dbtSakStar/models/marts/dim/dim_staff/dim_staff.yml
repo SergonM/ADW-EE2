@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: dim_staff
+    description: "Staff dimension table"
+    columns:
+      - name: staff_skey
+        description: "Surrogate key for the staff dimension, generated using a hash of staff details"
+        tests:
+          - unique
+          - not_null
+      - name: staff_id
+        description: "The primary key for the staff dimension"
+        tests:
+          - unique
+          - not_null
+      - name: staff_first_name
+        description: "Staff's first name"
+      - name: staff_last_name
+        description: "Staff's last name"
+      - name: staff_email
+        description: "Staff's email address"
+      - name: staff_active
+        description: "Flag indicating if the staff is active"
+      - name: staff_username
+        description: "Staff's username"
+      - name: staff_address
+        description: "Staff's street address"
+      - name: staff_district
+        description: "Staff's district"
+      - name: staff_postal_code
+        description: "Staff's postal code"
+      - name: staff_phone_number
+        description: "Staff's phone number"
+      - name: staff_city
+        description: "Staff's city"
+      - name: staff_country
+        description: "Staff's country"
+      - name: store_id
+        description: "ID of store where staff works"
+      - name: staff_last_update
+        description: "Timestamp of last update to staff record"
