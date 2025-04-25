@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Customer dimension"
+    columns:
+      - name: customer_skey
+        description: "Surrogate key"
+        tests:
+          - unique
+          - not_null

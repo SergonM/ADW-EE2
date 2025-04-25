@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_rental
+    description: "Rental data from Sakila database"
+    columns:
+      - name: rental_key
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: customer_key
+        description: "Foreign key to customer dimension"
+      - name: film_key
+        description: "Foreign key to film dimension"
+      - name: staff_key
+        description: "Foreign key to staff dimension"
+      - name: store_key
+        description: "Foreign key to store dimension"
+      - name: rental_date
+        description: "Date rental was created"
+      - name: return_date
+        description: "Date rental was returned"
+      - name: inventory_id
+        description: "ID of inventory item"
+      - name: rental_duration
+        description: "Duration of rental in days"
+      - name: last_update
+        description: "Last update timestamp"

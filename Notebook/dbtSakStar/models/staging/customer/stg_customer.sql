@@ -3,13 +3,14 @@ WITH source AS (
 ),
 joined AS (
     SELECT
-        c.customer_id as customer_key,
+        c.customer_id as customer_id,
         c.first_name as customer_first_name,
         c.last_name as customer_last_name,
         c.email as customer_email,
         c.active as customer_active,
         c.create_date as customer_created,
         a.address as customer_address,
+        a.district as customer_district,
         a.postal_code as customer_postal_code,
         a.phone as customer_phone_number,
         ci.city as customer_city,
@@ -23,3 +24,4 @@ joined AS (
     JOIN sakila_proxy.country co ON ci.country_id = co.country_id
 )
 SELECT * FROM joined
+ORDER BY customer_id

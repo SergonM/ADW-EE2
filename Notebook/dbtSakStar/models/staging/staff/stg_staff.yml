@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_staff
+    description: "Staff data from Sakila database"
+    columns:
+      - name: staff_key
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: staff_first_name
+        description: "Staff first name"
+      - name: staff_last_name
+        description: "Staff last name"
+      - name: staff_email
+        description: "Staff email address"
+      - name: staff_active
+        description: "Flag indicating if staff is active"
+      - name: staff_username
+        description: "Staff username"
+      - name: staff_last_update
+        description: "Last update timestamp"
+      - name: store_id
+        description: "ID of store where staff works"
