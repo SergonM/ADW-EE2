@@ -32,3 +32,12 @@ vars:
   schema_star: 'adw02_star'
 #  surrogate_key_treat_nulls_as_empty_strings: True
 
+models:
+  sakstar:
+    staging:
+      +materialized: table
+      +schema: adw02_stag
+    marts:
+      +materialized: table
+      +schema: adw02_star
+

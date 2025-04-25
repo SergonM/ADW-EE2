@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: sakila_proxy
+    database: sakila_proxy
+    tables:
+      - name: customer
+      - name: address
+      - name: city
+      - name: country
+      - name: store
+      - name: staff
+      - name: film
+      - name: inventory
+      - name: rental
+      - name: language

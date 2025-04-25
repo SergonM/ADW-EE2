@@ -17,9 +17,9 @@ services:
       - "8123:8123"  # HTTP interface
       - "9000:9000"  # Native TCP interface
     environment:
-      - CLICKHOUSE_DB=default  # Base de datos por defecto
-      - CLICKHOUSE_USER=default  # Usuario por defecto
-      - CLICKHOUSE_PASSWORD=default_password  # Contraseña por defecto
+      - CLICKHOUSE_DB=adw02_stag
+      - CLICKHOUSE_USER=user
+      - CLICKHOUSE_PASSWORD=userpassword
     cap_add:
       - SYS_NICE
       - NET_ADMIN

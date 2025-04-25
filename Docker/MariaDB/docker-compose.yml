@@ -7,7 +7,7 @@ services:
     restart: no
     environment:
       MYSQL_ROOT_PASSWORD: PfmmA143-WhFyiogiOp
-      MYSQL_DATABASE: SakilaStar
+      MYSQL_DATABASE: sakila
       MYSQL_USER: user
       MYSQL_PASSWORD: userpassword
     ports:

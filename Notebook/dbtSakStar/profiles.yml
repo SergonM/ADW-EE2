@@ -3,4 +3,10 @@ sak_profile:
   outputs:
     clickhouse:
       type: clickhouse
+      host: localhost
+      port: 9000
+      user: user
+      password: userpassword
+      database: adw02_stag
+      schema: adw02_stag
 

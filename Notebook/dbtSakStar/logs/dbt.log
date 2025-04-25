@@ -1,0 +1,591 @@
+[0m11:19:53.723466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e682e59a120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e682c4bd590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e682c4bd450>]}
+
+
+============================== 11:19:53.727577 | 49b655a4-7c58-433c-a57f-bb82a6295dc4 ==============================
+[0m11:19:53.727577 [info ] [MainThread]: Running with dbt=1.8.9
+[0m11:19:53.728271 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/logs', 'version_check': 'True', 'profiles_dir': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m11:19:53.738881 [info ] [MainThread]: dbt version: 1.8.9
+[0m11:19:53.739413 [info ] [MainThread]: python version: 3.13.2
+[0m11:19:53.739836 [info ] [MainThread]: python path: /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/env/bin/python
+[0m11:19:53.740250 [info ] [MainThread]: os info: Linux-6.14.2-arch1-1-x86_64-with-glibc2.41
+[0m11:19:53.827542 [info ] [MainThread]: Using profiles dir at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar
+[0m11:19:53.828064 [info ] [MainThread]: Using profiles.yml file at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/profiles.yml
+[0m11:19:53.828498 [info ] [MainThread]: Using dbt_project.yml file at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/dbt_project.yml
+[0m11:19:53.829113 [info ] [MainThread]: adapter type: clickhouse
+[0m11:19:53.829544 [info ] [MainThread]: adapter version: 1.8.9
+[0m11:19:53.955486 [info ] [MainThread]: Configuration:
+[0m11:19:53.956031 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:19:53.956485 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:19:53.956919 [info ] [MainThread]: Required dependencies:
+[0m11:19:53.957490 [debug] [MainThread]: Executing "git --help"
+[0m11:19:53.965451 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:19:53.966096 [debug] [MainThread]: STDERR: "b''"
+[0m11:19:53.966513 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:19:53.966958 [info ] [MainThread]: Connection:
+[0m11:19:53.967438 [info ] [MainThread]:   driver: None
+[0m11:19:53.967957 [info ] [MainThread]:   host: localhost
+[0m11:19:53.968487 [info ] [MainThread]:   port: 9000
+[0m11:19:53.968907 [info ] [MainThread]:   user: user
+[0m11:19:53.969321 [info ] [MainThread]:   schema: adw02_stag
+[0m11:19:53.969756 [info ] [MainThread]:   retries: 1
+[0m11:19:53.970181 [info ] [MainThread]:   database_engine: None
+[0m11:19:53.970624 [info ] [MainThread]:   cluster_mode: False
+[0m11:19:53.971050 [info ] [MainThread]:   secure: False
+[0m11:19:53.971496 [info ] [MainThread]:   verify: True
+[0m11:19:53.971908 [info ] [MainThread]:   client_cert: None
+[0m11:19:53.972323 [info ] [MainThread]:   client_cert_key: None
+[0m11:19:53.972803 [info ] [MainThread]:   connect_timeout: 10
+[0m11:19:53.973227 [info ] [MainThread]:   send_receive_timeout: 300
+[0m11:19:53.973688 [info ] [MainThread]:   sync_request_timeout: 5
+[0m11:19:53.974263 [info ] [MainThread]:   compress_block_size: 1048576
+[0m11:19:53.974882 [info ] [MainThread]:   compression: 
+[0m11:19:53.975629 [info ] [MainThread]:   check_exchange: True
+[0m11:19:53.976413 [info ] [MainThread]:   custom_settings: None
+[0m11:19:53.977201 [info ] [MainThread]:   use_lw_deletes: False
+[0m11:19:53.977912 [info ] [MainThread]:   allow_automatic_deduplication: False
+[0m11:19:53.978630 [info ] [MainThread]:   tcp_keepalive: False
+[0m11:19:53.979227 [info ] [MainThread]: Registered adapter: clickhouse=1.8.9
+[0m11:19:54.078155 [debug] [MainThread]: Acquiring new clickhouse connection 'debug'
+[0m11:19:54.078676 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:19:54.368156 [debug] [MainThread]: dbt_clickhouse adapter: On debug: select 1 as id...
+[0m11:19:54.371465 [debug] [MainThread]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m11:19:54.402388 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:19:54.402900 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:19:54.404387 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.7492501, "process_in_blocks": "3472", "process_kernel_time": 0.197622, "process_mem_max_rss": "132624", "process_out_blocks": "24", "process_user_time": 2.230371}
+[0m11:19:54.404994 [debug] [MainThread]: Command `dbt debug` succeeded at 11:19:54.404837 after 0.75 seconds
+[0m11:19:54.405465 [debug] [MainThread]: Connection 'debug' was left open.
+[0m11:19:54.406003 [debug] [MainThread]: On debug: Close
+[0m11:19:54.406622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e682c246780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e682a949010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e682c1ef570>]}
+[0m11:19:54.407367 [debug] [MainThread]: Flushing usage events
+[0m11:27:10.145327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d15428a120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d152199590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d152199450>]}
+
+
+============================== 11:27:10.149314 | 1edcedd1-faee-4714-b394-7496813c691a ==============================
+[0m11:27:10.149314 [info ] [MainThread]: Running with dbt=1.8.9
+[0m11:27:10.150022 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar', 'log_path': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:27:10.161357 [info ] [MainThread]: dbt version: 1.8.9
+[0m11:27:10.161885 [info ] [MainThread]: python version: 3.13.2
+[0m11:27:10.162316 [info ] [MainThread]: python path: /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/env/bin/python
+[0m11:27:10.162749 [info ] [MainThread]: os info: Linux-6.14.2-arch1-1-x86_64-with-glibc2.41
+[0m11:27:10.251743 [info ] [MainThread]: Using profiles dir at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar
+[0m11:27:10.252267 [info ] [MainThread]: Using profiles.yml file at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/profiles.yml
+[0m11:27:10.252702 [info ] [MainThread]: Using dbt_project.yml file at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/dbt_project.yml
+[0m11:27:10.253315 [info ] [MainThread]: adapter type: clickhouse
+[0m11:27:10.253746 [info ] [MainThread]: adapter version: 1.8.9
+[0m11:27:10.384465 [info ] [MainThread]: Configuration:
+[0m11:27:10.384990 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:27:10.385423 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:27:10.385835 [info ] [MainThread]: Required dependencies:
+[0m11:27:10.386268 [debug] [MainThread]: Executing "git --help"
+[0m11:27:10.388622 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:27:10.389280 [debug] [MainThread]: STDERR: "b''"
+[0m11:27:10.389736 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:27:10.390175 [info ] [MainThread]: Connection:
+[0m11:27:10.390623 [info ] [MainThread]:   driver: None
+[0m11:27:10.391028 [info ] [MainThread]:   host: localhost
+[0m11:27:10.391494 [info ] [MainThread]:   port: 9000
+[0m11:27:10.391891 [info ] [MainThread]:   user: user
+[0m11:27:10.392286 [info ] [MainThread]:   schema: adw02_stag
+[0m11:27:10.392701 [info ] [MainThread]:   retries: 1
+[0m11:27:10.393096 [info ] [MainThread]:   database_engine: None
+[0m11:27:10.393505 [info ] [MainThread]:   cluster_mode: False
+[0m11:27:10.393900 [info ] [MainThread]:   secure: False
+[0m11:27:10.394290 [info ] [MainThread]:   verify: True
+[0m11:27:10.394710 [info ] [MainThread]:   client_cert: None
+[0m11:27:10.395181 [info ] [MainThread]:   client_cert_key: None
+[0m11:27:10.395656 [info ] [MainThread]:   connect_timeout: 10
+[0m11:27:10.396054 [info ] [MainThread]:   send_receive_timeout: 300
+[0m11:27:10.396489 [info ] [MainThread]:   sync_request_timeout: 5
+[0m11:27:10.396901 [info ] [MainThread]:   compress_block_size: 1048576
+[0m11:27:10.397414 [info ] [MainThread]:   compression: 
+[0m11:27:10.397821 [info ] [MainThread]:   check_exchange: True
+[0m11:27:10.398211 [info ] [MainThread]:   custom_settings: None
+[0m11:27:10.398619 [info ] [MainThread]:   use_lw_deletes: False
+[0m11:27:10.399012 [info ] [MainThread]:   allow_automatic_deduplication: False
+[0m11:27:10.399485 [info ] [MainThread]:   tcp_keepalive: False
+[0m11:27:10.400047 [info ] [MainThread]: Registered adapter: clickhouse=1.8.9
+[0m11:27:10.493603 [debug] [MainThread]: Acquiring new clickhouse connection 'debug'
+[0m11:27:10.494105 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:27:10.773611 [debug] [MainThread]: dbt_clickhouse adapter: On debug: select 1 as id...
+[0m11:27:10.776928 [debug] [MainThread]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m11:27:10.808631 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:27:10.809152 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:27:10.810173 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.72756296, "process_in_blocks": "0", "process_kernel_time": 0.163228, "process_mem_max_rss": "132588", "process_out_blocks": "16", "process_user_time": 2.225012}
+[0m11:27:10.810770 [debug] [MainThread]: Command `dbt debug` succeeded at 11:27:10.810622 after 0.73 seconds
+[0m11:27:10.811201 [debug] [MainThread]: Connection 'debug' was left open.
+[0m11:27:10.811654 [debug] [MainThread]: On debug: Close
+[0m11:27:10.812223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d151f22780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d150625010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d151ecb790>]}
+[0m11:27:10.812876 [debug] [MainThread]: Flushing usage events
+[0m11:27:26.436076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7986b9692120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7986b75b1590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7986b75b1450>]}
+
+
+============================== 11:27:26.440117 | 5ad42029-398b-430b-a743-6e39e5a162f9 ==============================
+[0m11:27:26.440117 [info ] [MainThread]: Running with dbt=1.8.9
+[0m11:27:26.440980 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m11:27:26.451869 [info ] [MainThread]: dbt version: 1.8.9
+[0m11:27:26.452464 [info ] [MainThread]: python version: 3.13.2
+[0m11:27:26.453085 [info ] [MainThread]: python path: /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/env/bin/python
+[0m11:27:26.453687 [info ] [MainThread]: os info: Linux-6.14.2-arch1-1-x86_64-with-glibc2.41
+[0m11:27:26.540572 [info ] [MainThread]: Using profiles dir at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar
+[0m11:27:26.541133 [info ] [MainThread]: Using profiles.yml file at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/profiles.yml
+[0m11:27:26.541765 [info ] [MainThread]: Using dbt_project.yml file at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/dbt_project.yml
+[0m11:27:26.542546 [info ] [MainThread]: adapter type: clickhouse
+[0m11:27:26.542985 [info ] [MainThread]: adapter version: 1.8.9
+[0m11:27:26.670004 [info ] [MainThread]: Configuration:
+[0m11:27:26.670611 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:27:26.671248 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:27:26.671823 [info ] [MainThread]: Required dependencies:
+[0m11:27:26.672414 [debug] [MainThread]: Executing "git --help"
+[0m11:27:26.674838 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:27:26.675462 [debug] [MainThread]: STDERR: "b''"
+[0m11:27:26.675866 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:27:26.676309 [info ] [MainThread]: Connection:
+[0m11:27:26.676771 [info ] [MainThread]:   driver: None
+[0m11:27:26.677184 [info ] [MainThread]:   host: localhost
+[0m11:27:26.677602 [info ] [MainThread]:   port: 9000
+[0m11:27:26.678024 [info ] [MainThread]:   user: user
+[0m11:27:26.678579 [info ] [MainThread]:   schema: adw02_stag
+[0m11:27:26.678997 [info ] [MainThread]:   retries: 1
+[0m11:27:26.679426 [info ] [MainThread]:   database_engine: None
+[0m11:27:26.679850 [info ] [MainThread]:   cluster_mode: False
+[0m11:27:26.680496 [info ] [MainThread]:   secure: False
+[0m11:27:26.680906 [info ] [MainThread]:   verify: True
+[0m11:27:26.681301 [info ] [MainThread]:   client_cert: None
+[0m11:27:26.681721 [info ] [MainThread]:   client_cert_key: None
+[0m11:27:26.682114 [info ] [MainThread]:   connect_timeout: 10
+[0m11:27:26.682538 [info ] [MainThread]:   send_receive_timeout: 300
+[0m11:27:26.682931 [info ] [MainThread]:   sync_request_timeout: 5
+[0m11:27:26.683324 [info ] [MainThread]:   compress_block_size: 1048576
+[0m11:27:26.683737 [info ] [MainThread]:   compression: 
+[0m11:27:26.684131 [info ] [MainThread]:   check_exchange: True
+[0m11:27:26.684561 [info ] [MainThread]:   custom_settings: None
+[0m11:27:26.684980 [info ] [MainThread]:   use_lw_deletes: False
+[0m11:27:26.685435 [info ] [MainThread]:   allow_automatic_deduplication: False
+[0m11:27:26.685857 [info ] [MainThread]:   tcp_keepalive: False
+[0m11:27:26.686575 [info ] [MainThread]: Registered adapter: clickhouse=1.8.9
+[0m11:27:26.782539 [debug] [MainThread]: Acquiring new clickhouse connection 'debug'
+[0m11:27:26.783047 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:27:27.089411 [debug] [MainThread]: dbt_clickhouse adapter: On debug: select 1 as id...
+[0m11:27:27.092807 [debug] [MainThread]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m11:27:27.126840 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:27:27.127523 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:27:27.128788 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.75395703, "process_in_blocks": "0", "process_kernel_time": 0.177794, "process_mem_max_rss": "132580", "process_out_blocks": "8", "process_user_time": 2.228099}
+[0m11:27:27.129735 [debug] [MainThread]: Command `dbt debug` succeeded at 11:27:27.129523 after 0.76 seconds
+[0m11:27:27.130380 [debug] [MainThread]: Connection 'debug' was left open.
+[0m11:27:27.130864 [debug] [MainThread]: On debug: Close
+[0m11:27:27.131619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7986b733a780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7986b5a41010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7986b72e3790>]}
+[0m11:27:27.132549 [debug] [MainThread]: Flushing usage events
+[0m11:34:24.996640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7268e986e120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7268e7781590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7268e7781450>]}
+
+
+============================== 11:34:25.000596 | 391f221c-d0b8-488b-aeac-b9da81f75a30 ==============================
+[0m11:34:25.000596 [info ] [MainThread]: Running with dbt=1.8.9
+[0m11:34:25.001311 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar', 'debug': 'False', 'warn_error': 'None', 'log_path': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:34:25.012019 [info ] [MainThread]: dbt version: 1.8.9
+[0m11:34:25.012557 [info ] [MainThread]: python version: 3.13.2
+[0m11:34:25.012977 [info ] [MainThread]: python path: /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/env/bin/python
+[0m11:34:25.013399 [info ] [MainThread]: os info: Linux-6.14.2-arch1-1-x86_64-with-glibc2.41
+[0m11:34:25.102153 [info ] [MainThread]: Using profiles dir at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar
+[0m11:34:25.102690 [info ] [MainThread]: Using profiles.yml file at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/profiles.yml
+[0m11:34:25.103111 [info ] [MainThread]: Using dbt_project.yml file at /home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/dbt_project.yml
+[0m11:34:25.103721 [info ] [MainThread]: adapter type: clickhouse
+[0m11:34:25.104196 [info ] [MainThread]: adapter version: 1.8.9
+[0m11:34:25.231015 [info ] [MainThread]: Configuration:
+[0m11:34:25.231573 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:34:25.232011 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:34:25.232451 [info ] [MainThread]: Required dependencies:
+[0m11:34:25.232899 [debug] [MainThread]: Executing "git --help"
+[0m11:34:25.235312 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:34:25.235936 [debug] [MainThread]: STDERR: "b''"
+[0m11:34:25.236550 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:34:25.237005 [info ] [MainThread]: Connection:
+[0m11:34:25.237481 [info ] [MainThread]:   driver: None
+[0m11:34:25.237914 [info ] [MainThread]:   host: localhost
+[0m11:34:25.238329 [info ] [MainThread]:   port: 9000
+[0m11:34:25.238757 [info ] [MainThread]:   user: user
+[0m11:34:25.239165 [info ] [MainThread]:   schema: adw02_stag
+[0m11:34:25.239622 [info ] [MainThread]:   retries: 1
+[0m11:34:25.240036 [info ] [MainThread]:   database_engine: None
+[0m11:34:25.240459 [info ] [MainThread]:   cluster_mode: False
+[0m11:34:25.240985 [info ] [MainThread]:   secure: False
+[0m11:34:25.241403 [info ] [MainThread]:   verify: True
+[0m11:34:25.241813 [info ] [MainThread]:   client_cert: None
+[0m11:34:25.242228 [info ] [MainThread]:   client_cert_key: None
+[0m11:34:25.242655 [info ] [MainThread]:   connect_timeout: 10
+[0m11:34:25.243062 [info ] [MainThread]:   send_receive_timeout: 300
+[0m11:34:25.243584 [info ] [MainThread]:   sync_request_timeout: 5
+[0m11:34:25.244001 [info ] [MainThread]:   compress_block_size: 1048576
+[0m11:34:25.244424 [info ] [MainThread]:   compression: 
+[0m11:34:25.245022 [info ] [MainThread]:   check_exchange: True
+[0m11:34:25.245455 [info ] [MainThread]:   custom_settings: None
+[0m11:34:25.245870 [info ] [MainThread]:   use_lw_deletes: False
+[0m11:34:25.246281 [info ] [MainThread]:   allow_automatic_deduplication: False
+[0m11:34:25.246724 [info ] [MainThread]:   tcp_keepalive: False
+[0m11:34:25.247370 [info ] [MainThread]: Registered adapter: clickhouse=1.8.9
+[0m11:34:25.345166 [debug] [MainThread]: Acquiring new clickhouse connection 'debug'
+[0m11:34:25.345684 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:34:25.627615 [debug] [MainThread]: dbt_clickhouse adapter: On debug: select 1 as id...
+[0m11:34:25.630850 [debug] [MainThread]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m11:34:25.660755 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:34:25.661279 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:34:25.662256 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.7305293, "process_in_blocks": "0", "process_kernel_time": 0.176712, "process_mem_max_rss": "132864", "process_out_blocks": "16", "process_user_time": 2.196322}
+[0m11:34:25.662854 [debug] [MainThread]: Command `dbt debug` succeeded at 11:34:25.662697 after 0.73 seconds
+[0m11:34:25.663287 [debug] [MainThread]: Connection 'debug' was left open.
+[0m11:34:25.663758 [debug] [MainThread]: On debug: Close
+[0m11:34:25.664370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7268e7516780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7268e5c29010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7268e74bf790>]}
+[0m11:34:25.665111 [debug] [MainThread]: Flushing usage events
+[0m11:34:31.077293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a74aa8e120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a7489ad590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a7489ad450>]}
+
+
+============================== 11:34:31.081338 | 3080f226-08e0-40d6-b6c3-393d9f8392e4 ==============================
+[0m11:34:31.081338 [info ] [MainThread]: Running with dbt=1.8.9
+[0m11:34:31.082028 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/logs', 'version_check': 'True', 'profiles_dir': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:34:31.300238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3080f226-08e0-40d6-b6c3-393d9f8392e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a7499e1cd0>]}
+[0m11:34:31.375504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3080f226-08e0-40d6-b6c3-393d9f8392e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a74881f790>]}
+[0m11:34:31.376371 [info ] [MainThread]: Registered adapter: clickhouse=1.8.9
+[0m11:34:31.499851 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m11:34:31.500795 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:34:31.501269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3080f226-08e0-40d6-b6c3-393d9f8392e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a7487f4850>]}
+[0m11:34:33.492725 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m11:34:33.493375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3080f226-08e0-40d6-b6c3-393d9f8392e4', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a748800320>]}
+[0m11:34:33.772338 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.sakstar.marts
+[0m11:34:33.786410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3080f226-08e0-40d6-b6c3-393d9f8392e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a748337af0>]}
+[0m11:34:33.921542 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3080f226-08e0-40d6-b6c3-393d9f8392e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a748517860>]}
+[0m11:34:33.922200 [info ] [MainThread]: Found 1 model, 2 data tests, 10 sources, 608 macros
+[0m11:34:33.922725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3080f226-08e0-40d6-b6c3-393d9f8392e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a746a98590>]}
+[0m11:34:33.925385 [info ] [MainThread]: 
+[0m11:34:33.926241 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m11:34:33.927689 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list_'
+[0m11:34:33.941085 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:34:34.230330 [debug] [ThreadPool]: dbt_clickhouse adapter: On list_: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "connection_name": "list_"} */
+
+    select name from system.databases
+  ...
+[0m11:34:34.233828 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m11:34:34.266171 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_, now list__adw02_stag)
+[0m11:34:34.274130 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__adw02_stag: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "connection_name": "list__adw02_stag"} */
+select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        engine in ('MaterializedView', 'View'), 'view',
+        engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,0 as is_on_cluster
+          from system.tables as t join system.databases as db on t.database = db.name
+        where schema = 'adw02_stag'
+      
+
+  ...
+[0m11:34:34.291469 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m11:34:34.293528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3080f226-08e0-40d6-b6c3-393d9f8392e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a744d2aba0>]}
+[0m11:34:34.294246 [info ] [MainThread]: Concurrency: 1 threads (target='clickhouse')
+[0m11:34:34.294788 [info ] [MainThread]: 
+[0m11:34:34.303735 [debug] [Thread-1 (]: Began running node model.sakstar.stg_customer
+[0m11:34:34.304518 [info ] [Thread-1 (]: 1 of 1 START sql table model `adw02_stag`.`stg_customer` ....................... [RUN]
+[0m11:34:34.305133 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list__adw02_stag, now model.sakstar.stg_customer)
+[0m11:34:34.305639 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_customer
+[0m11:34:34.314999 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_customer"
+[0m11:34:34.315986 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_customer
+[0m11:34:34.349789 [debug] [Thread-1 (]: Creating new relation stg_customer
+[0m11:34:34.396406 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_customer"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_customer`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM sakila_proxy.customer
+),
+joined AS (
+    SELECT
+        c.customer_id as customer_key,
+        c.first_name as customer_first_name,
+        c.last_name as customer_last_name,
+        c.email as customer_email,
+        c.active as customer_active,
+        c.create_date as customer_created,
+        a.address as customer_address,
+        a.postal_code as customer_postal_code,
+        a.phone as customer_phone_number,
+        ci.city as customer_city,
+        co.country as customer_country,
+        c.last_update as customer_last_update,
+        c.address_id,
+        c.store_id
+    FROM source c
+    JOIN sakila_proxy.address a ON c.address_id = a.address_id
+    JOIN sakila_proxy.city ci ON a.city_id = ci.city_id
+    JOIN sakila_proxy.country co ON ci.country_id = co.country_id
+)
+SELECT * FROM joined
+          )
+        
+        ...
+[0m11:34:34.422513 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.03 seconds
+[0m11:34:34.446728 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_customer"} */
+
+    select name, type from system.columns where table = 'stg_customer'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m11:34:34.451640 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m11:34:34.457985 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_customer"
+[0m11:34:34.459031 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_customer"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_customer`
+        ("customer_key", "customer_first_name", "customer_last_name", "customer_email", "customer_active", "customer_created", "customer_address", "customer_postal_code", "customer_phone_number", "customer_city", "customer_country", "customer_last_update", "c.address_id", "store_id")WITH source AS (
+    SELECT * FROM sakila_proxy.customer
+),
+joined AS (
+    SELECT
+        c.customer_id as customer_key,
+        c.first_name as customer_first_name,
+        c.last_name as customer_last_name,
+        c.email as customer_email,
+        c.active as customer_active,
+        c.create_date as customer_created,
+        a.address as customer_address,
+        a.postal_code as customer_postal_code,
+        a.phone as customer_phone_number,
+        ci.city as customer_city,
+        co.country as customer_country,
+        c.last_update as customer_last_update,
+        c.address_id,
+        c.store_id
+    FROM source c
+    JOIN sakila_proxy.address a ON c.address_id = a.address_id
+    JOIN sakila_proxy.city ci ON a.city_id = ci.city_id
+    JOIN sakila_proxy.country co ON ci.country_id = co.country_id
+)
+SELECT * FROM joined
+  ...
+[0m11:34:34.540198 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.08 seconds
+[0m11:34:34.569483 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3080f226-08e0-40d6-b6c3-393d9f8392e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a7492fcf50>]}
+[0m11:34:34.570364 [info ] [Thread-1 (]: 1 of 1 OK created sql table model `adw02_stag`.`stg_customer` .................. [[32mOK[0m in 0.26s]
+[0m11:34:34.571206 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_customer
+[0m11:34:34.572864 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:34:34.573296 [debug] [MainThread]: Connection 'model.sakstar.stg_customer' was left open.
+[0m11:34:34.573962 [debug] [MainThread]: On model.sakstar.stg_customer: Close
+[0m11:34:34.574605 [info ] [MainThread]: 
+[0m11:34:34.575188 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.65 seconds (0.65s).
+[0m11:34:34.576125 [debug] [MainThread]: Command end result
+[0m11:34:34.624335 [info ] [MainThread]: 
+[0m11:34:34.624950 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:34:34.625419 [info ] [MainThread]: 
+[0m11:34:34.625896 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m11:34:34.626947 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.6104908, "process_in_blocks": "736", "process_kernel_time": 0.23123, "process_mem_max_rss": "143852", "process_out_blocks": "4088", "process_user_time": 4.823789}
+[0m11:34:34.627558 [debug] [MainThread]: Command `dbt run` succeeded at 11:34:34.627400 after 3.61 seconds
+[0m11:34:34.628051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a746ac6bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a746c454d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77a74886edd0>]}
+[0m11:34:34.628620 [debug] [MainThread]: Flushing usage events
+[0m11:35:57.758269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceef0e92120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeeed9d590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeeed9d450>]}
+
+
+============================== 11:35:57.760965 | 8d04fb53-1610-40b3-856c-aac75fb6c23f ==============================
+[0m11:35:57.760965 [info ] [MainThread]: Running with dbt=1.8.9
+[0m11:35:57.761464 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/sergon/Documents/semestre7/ADW/ADW-EE2/Notebook/dbtSakStar/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:35:57.905515 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8d04fb53-1610-40b3-856c-aac75fb6c23f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeefdd1cd0>]}
+[0m11:35:57.954776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8d04fb53-1610-40b3-856c-aac75fb6c23f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeeec0f790>]}
+[0m11:35:57.955449 [info ] [MainThread]: Registered adapter: clickhouse=1.8.9
+[0m11:35:58.034205 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m11:35:58.133414 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:35:58.133730 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:35:58.138727 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.sakstar.marts
+[0m11:35:58.172757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8d04fb53-1610-40b3-856c-aac75fb6c23f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeeebe7e50>]}
+[0m11:35:58.259794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8d04fb53-1610-40b3-856c-aac75fb6c23f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeeebf1f40>]}
+[0m11:35:58.260186 [info ] [MainThread]: Found 1 model, 2 data tests, 10 sources, 608 macros
+[0m11:35:58.260525 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8d04fb53-1610-40b3-856c-aac75fb6c23f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeee772b30>]}
+[0m11:35:58.261950 [info ] [MainThread]: 
+[0m11:35:58.262471 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m11:35:58.263237 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list_'
+[0m11:35:58.275552 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:35:58.476926 [debug] [ThreadPool]: dbt_clickhouse adapter: On list_: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "connection_name": "list_"} */
+
+    select name from system.databases
+  ...
+[0m11:35:58.479099 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m11:35:58.499596 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_, now list__adw02_stag)
+[0m11:35:58.504426 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__adw02_stag: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "connection_name": "list__adw02_stag"} */
+select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        engine in ('MaterializedView', 'View'), 'view',
+        engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,0 as is_on_cluster
+          from system.tables as t join system.databases as db on t.database = db.name
+        where schema = 'adw02_stag'
+      
+
+  ...
+[0m11:35:58.518303 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m11:35:58.519767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8d04fb53-1610-40b3-856c-aac75fb6c23f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeec8dd710>]}
+[0m11:35:58.520201 [info ] [MainThread]: Concurrency: 1 threads (target='clickhouse')
+[0m11:35:58.520498 [info ] [MainThread]: 
+[0m11:35:58.522527 [debug] [Thread-1 (]: Began running node model.sakstar.stg_customer
+[0m11:35:58.523015 [info ] [Thread-1 (]: 1 of 1 START sql table model `adw02_stag`.`stg_customer` ....................... [RUN]
+[0m11:35:58.523497 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list__adw02_stag, now model.sakstar.stg_customer)
+[0m11:35:58.523845 [debug] [Thread-1 (]: Began compiling node model.sakstar.stg_customer
+[0m11:35:58.530567 [debug] [Thread-1 (]: Writing injected SQL for node "model.sakstar.stg_customer"
+[0m11:35:58.531125 [debug] [Thread-1 (]: Began executing node model.sakstar.stg_customer
+[0m11:35:58.553762 [debug] [Thread-1 (]: Creating new relation stg_customer
+[0m11:35:58.583098 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_customer"} */
+
+            
+
+    
+        create table `adw02_stag`.`stg_customer`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS  replicated_deduplication_window=0
+
+                    
+            empty
+          as (
+            WITH source AS (
+    SELECT * FROM sakila_proxy.customer
+),
+joined AS (
+    SELECT
+        c.customer_id as customer_key,
+        c.first_name as customer_first_name,
+        c.last_name as customer_last_name,
+        c.email as customer_email,
+        c.active as customer_active,
+        c.create_date as customer_created,
+        a.address as customer_address,
+        a.postal_code as customer_postal_code,
+        a.phone as customer_phone_number,
+        ci.city as customer_city,
+        co.country as customer_country,
+        c.last_update as customer_last_update,
+        c.address_id,
+        c.store_id
+    FROM source c
+    JOIN sakila_proxy.address a ON c.address_id = a.address_id
+    JOIN sakila_proxy.city ci ON a.city_id = ci.city_id
+    JOIN sakila_proxy.country co ON ci.country_id = co.country_id
+)
+SELECT * FROM joined
+          )
+        
+        ...
+[0m11:35:58.604483 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m11:35:58.619460 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_customer"} */
+
+    select name, type from system.columns where table = 'stg_customer'
+    
+      and database = 'adw02_stag'
+    
+    order by position
+  ...
+[0m11:35:58.622939 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m11:35:58.627066 [debug] [Thread-1 (]: Writing runtime sql for node "model.sakstar.stg_customer"
+[0m11:35:58.627700 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.sakstar.stg_customer: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "sak_profile", "target_name": "clickhouse", "node_id": "model.sakstar.stg_customer"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `adw02_stag`.`stg_customer`
+        ("customer_key", "customer_first_name", "customer_last_name", "customer_email", "customer_active", "customer_created", "customer_address", "customer_postal_code", "customer_phone_number", "customer_city", "customer_country", "customer_last_update", "c.address_id", "store_id")WITH source AS (
+    SELECT * FROM sakila_proxy.customer
+),
+joined AS (
+    SELECT
+        c.customer_id as customer_key,
+        c.first_name as customer_first_name,
+        c.last_name as customer_last_name,
+        c.email as customer_email,
+        c.active as customer_active,
+        c.create_date as customer_created,
+        a.address as customer_address,
+        a.postal_code as customer_postal_code,
+        a.phone as customer_phone_number,
+        ci.city as customer_city,
+        co.country as customer_country,
+        c.last_update as customer_last_update,
+        c.address_id,
+        c.store_id
+    FROM source c
+    JOIN sakila_proxy.address a ON c.address_id = a.address_id
+    JOIN sakila_proxy.city ci ON a.city_id = ci.city_id
+    JOIN sakila_proxy.country co ON ci.country_id = co.country_id
+)
+SELECT * FROM joined
+  ...
+[0m11:35:58.679693 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m11:35:58.697762 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8d04fb53-1610-40b3-856c-aac75fb6c23f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeec8ce690>]}
+[0m11:35:58.698321 [info ] [Thread-1 (]: 1 of 1 OK created sql table model `adw02_stag`.`stg_customer` .................. [[32mOK[0m in 0.17s]
+[0m11:35:58.698857 [debug] [Thread-1 (]: Finished running node model.sakstar.stg_customer
+[0m11:35:58.699918 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:35:58.700209 [debug] [MainThread]: Connection 'model.sakstar.stg_customer' was left open.
+[0m11:35:58.700531 [debug] [MainThread]: On model.sakstar.stg_customer: Close
+[0m11:35:58.700873 [info ] [MainThread]: 
+[0m11:35:58.701259 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.44 seconds (0.44s).
+[0m11:35:58.702045 [debug] [MainThread]: Command end result
+[0m11:35:58.729758 [info ] [MainThread]: 
+[0m11:35:58.730202 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:35:58.730542 [info ] [MainThread]: 
+[0m11:35:58.730903 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m11:35:58.731660 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.01356, "process_in_blocks": "0", "process_kernel_time": 0.136611, "process_mem_max_rss": "138912", "process_out_blocks": "2752", "process_user_time": 1.880829}
+[0m11:35:58.732031 [debug] [MainThread]: Command `dbt run` succeeded at 11:35:58.731940 after 1.01 seconds
+[0m11:35:58.732373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeec8f22b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeec4c22b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ceeec4c2210>]}
+[0m11:35:58.732690 [debug] [MainThread]: Flushing usage events

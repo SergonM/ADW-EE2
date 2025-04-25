@@ -18,7 +18,9 @@
 --
 -- Table structure for table `dim_customer`
 --
-
+DROP SCHEMA IF EXISTS sakilastar;
+CREATE SCHEMA sakilastar;
+USE sakilastar;
 DROP TABLE IF EXISTS `dim_customer`;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
