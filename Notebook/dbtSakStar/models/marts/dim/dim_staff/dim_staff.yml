@@ -2,41 +2,41 @@ version: 2
 
 models:
   - name: dim_staff
-    description: "Staff dimension table"
+    description: "Tabla de dimensión del personal"
     columns:
       - name: staff_skey
-        description: "Surrogate key for the staff dimension, generated using a hash of staff details"
+        description: "Clave sustituta para la dimensión del personal, generada usando un hash de los detalles del personal"
         tests:
           - unique
           - not_null
       - name: staff_id
-        description: "The primary key for the staff dimension"
+        description: "La clave primaria para la dimensión del personal"
         tests:
           - unique
           - not_null
       - name: staff_first_name
-        description: "Staff's first name"
+        description: "Nombre del personal"
       - name: staff_last_name
-        description: "Staff's last name"
+        description: "Apellido del personal"
       - name: staff_email
-        description: "Staff's email address"
+        description: "Dirección de correo electrónico del personal"
       - name: staff_active
-        description: "Flag indicating if the staff is active"
+        description: "Indicador que muestra si el personal está activo"
       - name: staff_username
-        description: "Staff's username"
+        description: "Nombre de usuario del personal"
       - name: staff_address
-        description: "Staff's street address"
+        description: "Dirección del personal"
       - name: staff_district
-        description: "Staff's district"
+        description: "Distrito del personal"
       - name: staff_postal_code
-        description: "Staff's postal code"
+        description: "Código postal del personal"
       - name: staff_phone_number
-        description: "Staff's phone number"
+        description: "Número de teléfono del personal"
       - name: staff_city
-        description: "Staff's city"
+        description: "Ciudad del personal"
       - name: staff_country
-        description: "Staff's country"
+        description: "País del personal"
       - name: store_id
-        description: "ID of store where staff works"
+        description: "ID de la tienda donde trabaja el personal"
       - name: staff_last_update
-        description: "Timestamp of last update to staff record"
+        description: "Marca de tiempo de la última actualización del registro del personal"

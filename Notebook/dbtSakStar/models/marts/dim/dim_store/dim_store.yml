@@ -2,35 +2,35 @@ version: 2
 
 models:
   - name: dim_store
-    description: "Store dimension table"
+    description: "Tabla de dimensión de la tienda"
     columns:
       - name: store_skey
-        description: "Surrogate key for the store dimension"
+        description: "Clave sustituta para la dimensión de la tienda"
         tests:
           - unique
           - not_null
       - name: store_id
-        description: "The primary key for the store dimension"
+        description: "La clave primaria para la dimensión de la tienda"
         tests:
           - unique
           - not_null
       - name: store_address
-        description: "Store's street address"
+        description: "Dirección de la tienda"
       - name: store_district
-        description: "Store's district"
+        description: "Distrito de la tienda"
       - name: store_postal_code
-        description: "Store's postal code"
+        description: "Código postal de la tienda"
       - name: store_phone_number
-        description: "Store's phone number"
+        description: "Número de teléfono de la tienda"
       - name: store_city
-        description: "Store's city"
+        description: "Ciudad de la tienda"
       - name: store_country
-        description: "Store's country"
+        description: "País de la tienda"
       - name: store_manager_staff_id
-        description: "ID of the staff who manages the store"
+        description: "ID del personal que gestiona la tienda"
       - name: store_manager_first_name
-        description: "Manager's first name"
+        description: "Nombre del gerente"
       - name: store_manager_last_name
-        description: "Manager's last name"
+        description: "Apellido del gerente"
       - name: store_last_update
-        description: "Timestamp of last update to store record"
+        description: "Marca de tiempo de la última actualización del registro de la tienda"

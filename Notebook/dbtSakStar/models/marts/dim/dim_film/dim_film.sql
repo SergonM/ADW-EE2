@@ -16,7 +16,6 @@ final AS (
         f.release_year AS film_release_year,
         l.name AS film_language,
         ol.name AS film_original_language,
-        f.original_language_id IS NOT NULL AS film_has_original_language,
         f.rental_duration AS film_rental_duration,
         f.rental_rate AS film_rental_rate,
         f.length AS film_duration,

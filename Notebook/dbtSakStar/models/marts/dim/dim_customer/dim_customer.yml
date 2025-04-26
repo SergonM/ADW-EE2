@@ -2,39 +2,39 @@ version: 2
 
 models:
   - name: dim_customer
-    description: "Customer dimension table"
+    description: "Tabla de dimensión de clientes"
     columns:
       - name: customer_skey
-        description: "Surrogate key for the customer dimension, generated using a hash of customer details"
+        description: "Clave sustituta para la dimensión de clientes, generada usando un hash de los detalles del cliente"
         tests:
           - unique
           - not_null
       - name: customer_id
-        description: "The primary key for the customer dimension"
+        description: "La clave primaria para la dimensión de clientes"
         tests:
           - unique
           - not_null
       - name: customer_first_name
-        description: "Customer's first name"
+        description: "Nombre del cliente"
       - name: customer_last_name
-        description: "Customer's last name"
+        description: "Apellido del cliente"
       - name: customer_email
-        description: "Customer's email address"
+        description: "Dirección de correo electrónico del cliente"
       - name: customer_active
-        description: "Flag indicating if the customer is active"
+        description: "Indicador que muestra si el cliente está activo"
       - name: customer_created
-        description: "Date when customer record was created"
+        description: "Fecha en que se creó el registro del cliente"
       - name: customer_address
-        description: "Customer's street address"
+        description: "Dirección del cliente"
       - name: customer_district
-        description: "Customer's district"
+        description: "Distrito del cliente"
       - name: customer_postal_code
-        description: "Customer's postal code"
+        description: "Código postal del cliente"
       - name: customer_phone_number
-        description: "Customer's phone number"
+        description: "Número de teléfono del cliente"
       - name: customer_city
-        description: "Customer's city"
+        description: "Ciudad del cliente"
       - name: customer_country
-        description: "Customer's country"
+        description: "País del cliente"
       - name: customer_last_update
-        description: "Timestamp of last update to customer record"
+        description: "Marca de tiempo de la última actualización del registro del cliente"
