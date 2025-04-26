@@ -1,0 +1,65 @@
+# models/marts/fact/fct_rentals/fct_rentals.yml
+version: 2
+
+models:
+  - name: fct_rentals
+    description: "Tabla de hechos que contiene información sobre los alquileres de películas con llaves subrogadas relacionadas a las dimensiones"
+    config:
+      schema: marts
+    columns:
+      - name: rental_skey
+        description: "Llave subrogada para la tabla de hechos"
+        tests:
+          - unique
+          - not_null
+          
+      - name: customer_skey
+        description: "Llave subrogada que conecta con la dimensión de cliente"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_skey
+              
+      - name: film_skey
+        description: "Llave subrogada que conecta con la dimensión de película"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_film')
+              field: film_skey
+              
+      - name: staff_skey
+        description: "Llave subrogada que conecta con la dimensión de personal"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_staff')
+              field: staff_skey
+              
+      - name: store_skey
+        description: "Llave subrogada que conecta con la dimensión de tienda"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_store')
+              field: store_skey
+              
+      - name: date_key
+        description: "Llave que conecta con la dimensión de tiempo"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+              
+      - name: rental_id
+        description: "Identificador original del alquiler de la tabla fuente"
+        tests:
+          - not_null
+          
+      - name: count_rentals
+        description: "Contador total de alquileres en el conjunto de datos"
+        
+      - name: rental_duration
+        description: "Duración del alquiler calculada en días"
