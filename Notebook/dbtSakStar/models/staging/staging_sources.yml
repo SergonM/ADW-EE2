@@ -14,3 +14,5 @@ sources:
       - name: inventory
       - name: rental
       - name: language
+      - name: category
+      - name: film_category

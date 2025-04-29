@@ -1,11 +1,8 @@
-# models/marts/fact/fct_rentals/fct_rentals.yml
 version: 2
 
 models:
   - name: fct_rentals
     description: "Tabla de hechos que contiene información sobre los alquileres de películas con llaves subrogadas relacionadas a las dimensiones"
-    config:
-      schema: marts
     columns:
       - name: rental_skey
         description: "Llave subrogada para la tabla de hechos"

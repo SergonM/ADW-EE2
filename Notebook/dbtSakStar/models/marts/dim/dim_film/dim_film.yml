@@ -20,6 +20,8 @@ models:
         description: "Descripción de la película"
       - name: film_release_year
         description: "Año en que se lanzó la película"
+      - name: film_category_name
+        description: "Categoría a la que pertenece la película"
       - name: film_language
         description: "Idioma de la película"
       - name: film_original_language

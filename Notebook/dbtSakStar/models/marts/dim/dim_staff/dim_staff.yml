@@ -22,20 +22,6 @@ models:
         description: "Dirección de correo electrónico del personal"
       - name: staff_active
         description: "Indicador que muestra si el personal está activo"
-      - name: staff_username
-        description: "Nombre de usuario del personal"
-      - name: staff_address
-        description: "Dirección del personal"
-      - name: staff_district
-        description: "Distrito del personal"
-      - name: staff_postal_code
-        description: "Código postal del personal"
-      - name: staff_phone_number
-        description: "Número de teléfono del personal"
-      - name: staff_city
-        description: "Ciudad del personal"
-      - name: staff_country
-        description: "País del personal"
       - name: store_id
         description: "ID de la tienda donde trabaja el personal"
       - name: staff_last_update
