@@ -12,10 +12,10 @@ services:
     environment:
       JUPYTER_ENABLE_LAB: "yes"
     networks:
-      - eda_network
+      - ee2_network
 
 networks:
-  eda_network:
-    name: eda_network 
+  ee2_network:
+    name: ee2_network 
 
 
