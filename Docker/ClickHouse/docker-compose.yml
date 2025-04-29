@@ -26,12 +26,12 @@ services:
       - IPC_LOCK
       - SYS_PTRACE
     networks:
-      - eda_network
+      - ee2_network
 
 volumes:
   clickhouse_data:
   clickhouse_logs:
 
 networks:
-  eda_network:
-    name: eda_network
+  ee2_network:
+    name: ee2_network

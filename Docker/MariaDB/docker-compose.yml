@@ -17,11 +17,11 @@ services:
       - ./sakila-db:/docker-entrypoint-initdb.d  # Carga la BD Sakila al iniciar
     command: --local-infile=1
     networks:
-      - eda_network
+      - ee2_network
 
 volumes:
   mariadb_data:
 
 networks:
-  eda_network:
-    name: eda_network
+  ee2_network:
+    name: ee2_network
